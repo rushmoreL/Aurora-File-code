@@ -27,8 +27,9 @@ function copyToClipboard() {
     if (result && result !== "Invalid input.") {
         navigator.clipboard.writeText(result).then(() => {
             alert('File name copied to clipboard!');
-        }, (err) => {
+        }).catch(err => {
             console.error('Could not copy text: ', err);
+            alert('Failed to copy text.');
         });
     }
 }
