@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Name Generator</h1>
+        <textarea id="codeInput" placeholder="Enter your code here"></textarea>
+        
+        <div class="options">
+            <label for="option">Choose 1 or 2:</label>
+            <select id="option">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        
+        <div class="options">
+            <label for="seasonInput">Enter SEASON (e.g., FA25):</label>
+            <input type="text" id="seasonInput" placeholder="e.g., FA25">
+        </div>
+        
+        <button onclick="generateFileName()">Generate File Name</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
