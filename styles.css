@@ -19,7 +19,7 @@ body {
 }
 
 textarea {
-    width: calc(100% - 30px);
+    width: 80%;
     height: 100px;
     margin-bottom: 15px;
     border-radius: 8px;
