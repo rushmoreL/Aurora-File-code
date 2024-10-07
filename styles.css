@@ -63,19 +63,17 @@ button:hover {
 
 #result-container {
     margin-top: 25px;
+}
+
+.result {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
-#result {
-    font-weight: bold;
-    font-size: 18px;
-    color: #333333;
-    margin-right: 10px;
-}
-
-#copyButton {
+.copyButton {
+    margin-left: 10px;
     padding: 5px 10px;
     background-color: #333;
     color: #fff;
@@ -85,6 +83,6 @@ button:hover {
     font-size: 14px;
 }
 
-#copyButton:hover {
+.copyButton:hover {
     background-color: #555;
 }
