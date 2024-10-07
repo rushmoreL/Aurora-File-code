@@ -31,10 +31,13 @@ function copyToClipboard(elementId) {
     const textToCopy = document.getElementById(elementId).innerText;
     if (textToCopy) {
         navigator.clipboard.writeText(textToCopy).then(() => {
-            alert('File name copied to clipboard!');
+            const button = document.querySelector(`[onclick="copyToClipboard('${elementId}')"]`);
+            button.innerText = 'Copied!';
+            setTimeout(() => {
+                button.innerText = 'Copy';
+            }, 2000);
         }).catch(err => {
             console.error('Could not copy text: ', err);
-            alert('Failed to copy text.');
         });
     }
 }
