@@ -20,15 +20,15 @@ function generateFileNames() {
 
     // Aurora Upload Name
     const auroraFileName = `${moidNumber}_${option}_${description.replace(/ /g, '_')}_${season}_${productNumber}`;
-    document.getElementById('auroraName').innerText = `Aurora Upload Name: ${auroraFileName}`;
+    document.getElementById('auroraName').innerText = auroraFileName;
 
     // Schm Name
     const schmFileName = `${productNumber}_${description.replace(/ /g, '_')}_schm_${season}_T${option}`;
-    document.getElementById('schmName').innerText = `Schm Name: ${schmFileName}`;
+    document.getElementById('schmName').innerText = schmFileName;
 }
 
 function copyToClipboard(elementId) {
-    const textToCopy = document.getElementById(elementId).innerText.split(': ')[1];
+    const textToCopy = document.getElementById(elementId).innerText;
     if (textToCopy) {
         navigator.clipboard.writeText(textToCopy).then(() => {
             alert('File name copied to clipboard!');
