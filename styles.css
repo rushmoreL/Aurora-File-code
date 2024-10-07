@@ -19,7 +19,7 @@ body {
 }
 
 textarea {
-    width: 100%;
+    width: calc(100% - 30px);
     height: 100px;
     margin-bottom: 15px;
     border-radius: 8px;
@@ -39,7 +39,7 @@ label {
 }
 
 select, input[type="text"] {
-    width: calc(100% - 22px);
+    width: calc(100% - 30px);
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ced4da;
