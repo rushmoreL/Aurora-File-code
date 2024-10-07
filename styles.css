@@ -61,9 +61,30 @@ button:hover {
     background-color: #0056b3;
 }
 
-#result {
+#result-container {
     margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result {
     font-weight: bold;
     font-size: 18px;
     color: #333333;
+    margin-right: 10px;
+}
+
+#copyButton {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#copyButton:hover {
+    background-color: #555;
 }
