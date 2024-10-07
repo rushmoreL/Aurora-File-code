@@ -24,10 +24,17 @@
             <input type="text" id="seasonInput" placeholder="e.g., FA25">
         </div>
         
-        <button onclick="generateFileName()">Generate File Name</button>
+        <button onclick="generateFileNames()">Generate File Names</button>
+        
         <div id="result-container">
-            <span id="result"></span>
-            <button id="copyButton" onclick="copyToClipboard()" title="Copy to clipboard">Copy</button>
+            <div class="result">
+                <span id="auroraName"></span>
+                <button class="copyButton" onclick="copyToClipboard('auroraName')" title="Copy to clipboard">Copy</button>
+            </div>
+            <div class="result">
+                <span id="schmName"></span>
+                <button class="copyButton" onclick="copyToClipboard('schmName')" title="Copy to clipboard">Copy</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
