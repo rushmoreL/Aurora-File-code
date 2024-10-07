@@ -21,3 +21,14 @@ function generateFileName() {
     
     document.getElementById('result').innerText = newFileName;
 }
+
+function copyToClipboard() {
+    const result = document.getElementById('result').innerText;
+    if (result && result !== "Invalid input.") {
+        navigator.clipboard.writeText(result).then(() => {
+            alert('File name copied to clipboard!');
+        }, (err) => {
+            console.error('Could not copy text: ', err);
+        });
+    }
+}
