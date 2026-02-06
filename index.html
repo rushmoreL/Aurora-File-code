@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Illustrator File Name Generator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Illustrator File Name Generator</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Name Generator</h1>
-        <textarea id="codeInput" placeholder="Enter T-shirt code here"></textarea>
-        <div class="options">
-            <label for="option">Choose T1 or T2:</label>
-            <select id="option">
-                <option value="1">T1</option>
-                <option value="2">T2</option>
-            </select>
-        </div>
-        
-        <div class="options">
-            <label for="seasonInput">Enter SEASON (e.g., FA25):</label>
-            <input type="text" id="seasonInput" placeholder="e.g., FA25">
-        </div>
-        
-        <button onclick="generateFileNames()">Generate File Names</button>
-        
-        <div id="result-container">
-            <div class="result">
-                <span id="auroraName"></span>
-                <button class="copyButton" onclick="copyToClipboard('auroraName')" title="Copy to clipboard">Copy</button>
-            </div>
-            <div class="result">
-                <span id="schmName"></span>
-                <button class="copyButton" onclick="copyToClipboard('schmName')" title="Copy to clipboard">Copy</button>
-            </div>
-        </div>
+  <div class="container">
+    <!-- Help button -->
+    <div class="help-wrapper">
+      <button class="help-button">?</button>
+      <div class="help-card">
+        <img src="reference.JPG" alt="Input example" />
+        <p>Copy all the text into generator.</p>
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <h1>Name Generator</h1>
+
+    <textarea
+      id="codeInput"
+      placeholder="Enter T-shirt code here"
+    ></textarea>
+
+    <div class="options">
+      <label for="option">Choose T1 or T2:</label>
+      <select id="option">
+        <option value="1">T1</option>
+        <option value="2">T2</option>
+      </select>
+    </div>
+
+    <div class="options">
+      <label for="seasonInput">Enter SEASON (e.g., FA25):</label>
+      <input type="text" id="seasonInput" placeholder="e.g., FA25" />
+    </div>
+
+    <button onclick="generateFileNames()">Generate File Names</button>
+
+    <div id="result-container">
+      <div class="result result-aurora">
+        <span class="result-label">AURORA</span>
+        <span id="auroraName"></span>
+        <button
+          class="copyButton"
+          onclick="copyToClipboard('auroraName')"
+        >
+          Copy
+        </button>
+      </div>
+
+      <div class="result result-schm">
+        <span class="result-label">SCHM</span>
+        <span id="schmName"></span>
+        <button
+          class="copyButton"
+          onclick="copyToClipboard('schmName')"
+        >
+          Copy
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
