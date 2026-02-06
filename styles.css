@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  position: relative; /* for help button */
+  position: relative;
   text-align: center;
   background-color: #ffffff;
   padding: 30px;
@@ -72,38 +72,40 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  padding-top: 18px; /* space for label */
+  margin-top: 14px;
+  padding-top: 26px; /* 给标签留空间 */
 }
 
-/* result labels */
+/* ---------- Result Labels (AURORA / SCHM) ---------- */
+
 .result-label {
   position: absolute;
   top: 2px;
   left: 6px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #888;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #000;
+  background-color: #f1f1f1;
+  padding: 3px 8px;
+  border-radius: 6px; /* 方圆角 */
   pointer-events: none;
 }
 
-.result-aurora .result-label {
-  color: #007bff;
-}
-
+/* 语义保留，但不再用颜色区分 */
+.result-aurora .result-label,
 .result-schm .result-label {
-  color: #555;
+  color: #000;
+  background-color: #f1f1f1;
 }
 
 .copyButton {
   margin-left: 10px;
-  padding: 5px 10px;
+  padding: 6px 12px;
   background-color: #333;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 999px;
   cursor: pointer;
   font-size: 14px;
 }
@@ -120,25 +122,28 @@ button:hover {
   right: 16px;
 }
 
+/* 真正的圆形按钮 */
 .help-button {
   width: 28px;
   height: 28px;
+  padding: 0;
   border-radius: 50%;
-  border: none;
-  background-color: #000;
-  color: #fff;
-  font-weight: 700;
-  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
   font-size: 14px;
   line-height: 28px;
   text-align: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .help-button:hover {
-  background-color: #333;
+  background-color: #f5f5f5;
 }
 
-/* popup card */
+/* Help popup card */
 .help-card {
   position: absolute;
   top: 36px;
