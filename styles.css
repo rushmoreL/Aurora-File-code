@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+  position: relative; /* for help button */
   text-align: center;
   background-color: #ffffff;
   padding: 30px;
@@ -75,7 +76,7 @@ button:hover {
   padding-top: 18px; /* space for label */
 }
 
-/* Left-top label */
+/* result labels */
 .result-label {
   position: absolute;
   top: 2px;
@@ -88,7 +89,6 @@ button:hover {
   pointer-events: none;
 }
 
-/* Variant styles */
 .result-aurora .result-label {
   color: #007bff;
 }
@@ -112,3 +112,60 @@ button:hover {
   background-color: #555;
 }
 
+/* ---------- Help Button ---------- */
+
+.help-wrapper {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.help-button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.help-button:hover {
+  background-color: #333;
+}
+
+/* popup card */
+.help-card {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 220px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 10;
+}
+
+.help-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.help-card p {
+  font-size: 12px;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+/* hover trigger */
+.help-wrapper:hover .help-card {
+  display: block;
+}
