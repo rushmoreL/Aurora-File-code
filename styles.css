@@ -1,88 +1,114 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #e0f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #e0f7fa;
 }
 
 .container {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 500px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
 }
 
 textarea {
-    width: 90%;
-    height: 100px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ced4da;
-    padding: 10px;
-    font-size: 16px;
+  width: 90%;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .options {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-select, input[type="text"] {
-    width: 90%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ced4da;
-    font-size: 16px;
+select,
+input[type='text'] {
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
 }
 
 button {
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 #result-container {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .result {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 18px; /* space for label */
+}
+
+/* Left-top label */
+.result-label {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  pointer-events: none;
+}
+
+/* Variant styles */
+.result-aurora .result-label {
+  color: #007bff;
+}
+
+.result-schm .result-label {
+  color: #555;
 }
 
 .copyButton {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .copyButton:hover {
-    background-color: #555;
+  background-color: #555;
 }
+
