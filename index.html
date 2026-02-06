@@ -8,7 +8,8 @@
 </head>
 <body>
   <div class="container">
-    <!-- Help button -->
+
+    <!-- Help Button -->
     <div class="help-wrapper">
       <button class="help-button">?</button>
       <div class="help-card">
@@ -19,6 +20,7 @@
 
     <h1>Name Generator</h1>
 
+    <!-- Input -->
     <textarea
       id="codeInput"
       placeholder="Enter T-shirt code here"
@@ -34,11 +36,17 @@
 
     <div class="options">
       <label for="seasonInput">Enter SEASON (e.g., FA25):</label>
-      <input type="text" id="seasonInput" placeholder="e.g., FA25" />
+      <input
+        type="text"
+        id="seasonInput"
+        placeholder="e.g., FA25"
+      />
     </div>
 
+    <!-- Generate -->
     <button onclick="generateFileNames()">Generate File Names</button>
 
+    <!-- Results -->
     <div id="result-container">
       <div class="result result-aurora">
         <span class="result-label">AURORA</span>
@@ -62,6 +70,12 @@
         </button>
       </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Updated in 2026. Copyright @Seal Luo. All rights reserved.
+    </div>
+
   </div>
 
   <script src="script.js"></script>
